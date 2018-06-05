@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Event";
+}
+
+<h2>Event</h2>
+
+<div style="width: 90%; margin: 0 auto">
+    <table id="eventTable">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Technology</th>
+                <th>Starting Date</th>
+                <th>Registration Link</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+<link href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+@section Scripts {
+    <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $('#eventTable').DataTable({
+                "ajax": {
+                    "url": "/Event/Load",
+                    "type": "GET",
+                    "datatype": "json"
+                },
+                "columns": [
+                        { "data": "Title", "autoWidth": true },
+                        { "data": "Technology", "autoWidth": true },
+                        { "data": "Starting Date", "autoWidth": true },
+                        { "data": "Registration Link", "autoWidth": true }
+                ]
+            });
+        });
+    </script>
+}

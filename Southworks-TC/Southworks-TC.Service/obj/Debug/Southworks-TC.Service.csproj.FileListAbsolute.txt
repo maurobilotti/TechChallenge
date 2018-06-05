@@ -1,0 +1,10 @@
+C:\Projects\SW - TechChallenge\Southworks-TC\Southworks-TC.Service\bin\Debug\Southworks-TC.Service.dll
+C:\Projects\SW - TechChallenge\Southworks-TC\Southworks-TC.Service\bin\Debug\Southworks-TC.Service.pdb
+C:\Projects\SW - TechChallenge\Southworks-TC\Southworks-TC.Service\obj\Debug\Southworks-TC.Service.csprojResolveAssemblyReference.cache
+C:\Projects\SW - TechChallenge\Southworks-TC\Southworks-TC.Service\obj\Debug\Southworks-TC.Service.dll
+C:\Projects\SW - TechChallenge\Southworks-TC\Southworks-TC.Service\obj\Debug\Southworks-TC.Service.pdb
+C:\Projects\Southworks-TC\Southworks-TC.Service\bin\Debug\Southworks-TC.Service.dll
+C:\Projects\Southworks-TC\Southworks-TC.Service\bin\Debug\Southworks-TC.Service.pdb
+C:\Projects\Southworks-TC\Southworks-TC.Service\obj\Debug\Southworks-TC.Service.csprojResolveAssemblyReference.cache
+C:\Projects\Southworks-TC\Southworks-TC.Service\obj\Debug\Southworks-TC.Service.dll
+C:\Projects\Southworks-TC\Southworks-TC.Service\obj\Debug\Southworks-TC.Service.pdb
