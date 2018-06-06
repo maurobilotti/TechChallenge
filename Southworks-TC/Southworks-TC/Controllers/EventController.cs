@@ -1,13 +1,11 @@
 ﻿using Southworks_TC.Models;
 using Southworks_TC.Service;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Southworks_TC.Controllers
 {
+    [HandleError]
     public class EventController : Controller
     {
         private IEventService _service;
@@ -18,25 +16,21 @@ namespace Southworks_TC.Controllers
         }
 
         // GET: Event
+        [Route("Event/Index")]
         public ActionResult Index()
         {
             return View();
         }
 
+        /// <summary>
+        /// returns the events from the DB to the view via AJAX GET request
+        /// </summary>
+        /// <returns></returns>
+        [OutputCache(CacheProfile = "CacheEvents")]  //added by statement
         public ActionResult Load()
         {
-            var events = _service.GetEvents().Select(e => new EventViewModel(e));
-            var returnType = new ReturnType(events);
+            var events = _service.GetEvents().Select(e => new EventViewModel(e));            
             return Json(new { data = events }, JsonRequestBehavior.AllowGet);
-        }
-
-        public class ReturnType
-        {
-            public IEnumerable<EventViewModel> Data { get; set; }
-            public ReturnType(IEnumerable<EventViewModel> _data)
-            {
-                Data = _data;
-            }
-        }
+        }       
     }
 }
