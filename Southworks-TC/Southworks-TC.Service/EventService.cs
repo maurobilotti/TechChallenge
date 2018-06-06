@@ -19,7 +19,7 @@ namespace Southworks_TC.Service
 
             try
             {
-                result = _db.Event.Take(1000).ToList();
+                result = _db.Event.ToList();
             }
             catch (System.Exception ex)
             {
