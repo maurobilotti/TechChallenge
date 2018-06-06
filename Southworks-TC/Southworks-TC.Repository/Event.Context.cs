@@ -13,9 +13,9 @@ namespace Southworks_TC.Repository
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class EventContext : DbContext
+    public partial class Entities : DbContext
     {
-        public EventContext()
+        public Entities()
             : base("name=Entities")
         {
         }

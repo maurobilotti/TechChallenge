@@ -4,18 +4,29 @@ using System.Linq;
 
 namespace Southworks_TC.Service
 {
-    public class EventService
+    public class EventService : IEventService
     {
-        private EventContext _db;
+        private Entities _db;
 
         public EventService()
         {
-            _db = new EventContext();
+            _db = new Entities();
         }
 
         public IEnumerable<Event> GetEvents()
         {
-            return _db.Event.ToList();
+            List<Event> result = new List<Event>();
+
+            try
+            {
+                result = _db.Event.Take(1000).ToList();
+            }
+            catch (System.Exception ex)
+            {
+                throw ex;
+            }
+
+            return result;
         }
     }
 }
